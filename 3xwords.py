@@ -1,13 +1,12 @@
 # -------------------------------------------------------------------------------
 
 # CS50 Final Project: 3xWords
-# Author: Arya Moitra
 
-# Description:
 # This script implements a PyQt5 application for simplifying the process of
 # creating, editing, and deleting posts on a Jekyll-based website hosted on
 # GitHub Pages. This version of the script is specifically meant to be used
 # for the Shakespeare in Bengal project.
+# Copyright (C) 2024 Arya Moitra
 
 # Requirements:
 # - Python 3.12.4 or higher
