@@ -518,7 +518,7 @@ class Ui_MainWindow(object):
         self.deletionQuote.setText(_translate("MainWindow", "Parting is such sweet sorrow, / That I shall say good night till it be morrow. (Romeo and Juliet, Act 2, Scene 2)"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.delete), _translate("MainWindow", "Delete"))
 
-        self.instructions.setText(_translate("MainWindow", "Press Ctrl+S (Cmd+S on macOS) to open the setup window."))
+        self.instructions.setText(_translate("MainWindow", "Press Ctrl+S to open the setup window."))
 
 
     def clone_or_pull(self, repo_link, local_repo_path):
@@ -738,7 +738,7 @@ categories: {categories}
                     file.write(markdown_post)
                 print(f"{new_sanitized_file_name} has been successfully created!")
 
-            # Create a new branch and commit changes to the branch
+            # Create a new branch and commit changes locally, and push changes to the branch
             new_branch = self.create_branch(new_sanitized_file_name)
             self.repo.git.add(A=True)
             if is_edit:
@@ -748,7 +748,7 @@ categories: {categories}
             self.repo.index.commit(f"{action}: {new_sanitized_file_name}")
             self.repo.remotes.origin.push(new_branch)
 
-            # Merge with the main branch and commit changes
+            # Merge with the main branch and push changes
             success = self.merge(new_branch.name, is_edit=is_edit)
             if success:
                 self.repo.remotes.origin.push("main")
@@ -873,13 +873,13 @@ categories: {categories}
         # Set the "Select Post" field to empty
         self.selectPostDeletionLineEdit.setText("")
 
-        # Create a new branch and commit changes to the branch
+        # Create a new branch, commit changes locally, and push changes to the branch
         new_branch = self.create_branch(file_name)
         self.repo.git.add(A=True)
         self.repo.index.commit(f"Delete post: {file_name}")
         self.repo.remotes.origin.push(new_branch)
 
-        # Merge with the main branch and commit changes
+        # Merge with the main branch and push changes
         success = self.merge(new_branch.name, is_delete=True)
         if success:
             self.repo.remotes.origin.push("main")
