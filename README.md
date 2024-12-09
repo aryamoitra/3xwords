@@ -59,4 +59,4 @@ Once **the Publish/Edit button** is clicked in the application, a series of auto
 If **the Delete button** is clicked, the program deletes a file locally from the `_posts` directory based on the valid file name in the Select Post field and sequentially completes the last three steps listed above. The changes made in the `_posts` directory should appear on the user’s website.
 
 ## Acknowledgements
-This application was developed as the final project for the CS50x course. I would like to thank Prof. David J. Malan and his team for providing an invaluable introduction to computer science, which made this project possible.
+This application was developed as the final project for the CS50x course. I would like to thank Prof. David J. Malan and his team for providing an excellent introduction to computer science, which made this project possible.
