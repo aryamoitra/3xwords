@@ -535,7 +535,7 @@ class Ui_MainWindow(object):
         else:
             self.repo = Repo(local_repo_path)
             self.repo.remotes.origin.pull("main")
-            print("pull")
+            # print("pull")
         return self.repo
 
 
@@ -724,10 +724,10 @@ categories: {categories}
                     with open(new_file_path, 'w') as file:
                         file.write(markdown_post)
                     if old_file_name != new_sanitized_file_name:
-                        print(f"{old_file_name} has been successfully edited!\nNew file name with updated title and/or date: {new_sanitized_file_name}")
+                        # print(f"{old_file_name} has been successfully edited!\nNew file name with updated title and/or date: {new_sanitized_file_name}")
                         select_post_edit.setText(new_sanitized_file_name)
                     else:
-                        print(f"{new_sanitized_file_name} has been successfully edited!")
+                        # print(f"{new_sanitized_file_name} has been successfully edited!")
                     if new_sanitized_file_name != new_file_name:
                             print(f"The file name has been truncated as it was too long. ({len(new_file_name)} characters including the length of the file extension)")
                 except FileNotFoundError:
@@ -736,7 +736,7 @@ categories: {categories}
             else:
                 with open(new_file_path, 'w') as file:
                     file.write(markdown_post)
-                print(f"{new_sanitized_file_name} has been successfully created!")
+                # print(f"{new_sanitized_file_name} has been successfully created!")
 
             # Create a new branch and commit changes locally, and push changes to the branch
             new_branch = self.create_branch(new_sanitized_file_name)
