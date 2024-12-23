@@ -728,6 +728,7 @@ categories: {categories}
                         select_post_edit.setText(new_sanitized_file_name)
                     else:
                         # print(f"{new_sanitized_file_name} has been successfully edited!")
+                        pass
                     if new_sanitized_file_name != new_file_name:
                             print(f"The file name has been truncated as it was too long. ({len(new_file_name)} characters including the length of the file extension)")
                 except FileNotFoundError:
