@@ -38,7 +38,7 @@ The entire application was built using Python. The graphical user interface (GUI
 
 Opening the application for the first time, the user will be prompted to provide the web URL and the name of the GitHub repository in which the files and directories related to their website exist. The user-provided data will be stored in a JSON file named `repo.json`. After that, the remote repository will be cloned to the local machine in the same directory. It should be noted that the application cannot run without `repo.json`. If the user fails to provide the required data, they will be warned, and if the data is still not provided, the application will close. Once the initial setup is successfully completed, the main features of the application will be accessible. The setup window can be reopened by pressing Ctrl+S on Windows.
 
-The main window of the application contains various fields or input boxes in the three tabs (mentioned in the “Key Features” section) to hold the required data for the post that the user wants to create, edit, or delete. These fields have different characteristics:
+The main window of the application contains various fields or input boxes in the three tabs (mentioned in the “Key Features” section) to provide the required data for the post that the user wants to create, edit, or delete. These fields have different characteristics:
 - The **Title** field holds a maximum of 190 characters.
 - In the **Date** field, the input is stored in DD/MM/YYYY format.
 - Comma-separated values in the **Tags** field are treated as different tags.
