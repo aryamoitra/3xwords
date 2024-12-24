@@ -6,6 +6,8 @@ Hamlet: Words, words, words.
 
 — *Hamlet*, Act 2, Scene 2
 
+#### Video Demo: https://youtu.be/oy9qJDtV0_A?si=ntV2SVj4L8DR11Dx
+
 3xWords is a PyQt5 application for simplifying the process of creating, editing, and deleting posts on a Jekyll-based website hosted on GitHub Pages. This version of the application is specifically meant to be used for Shakespeare in Bengal (SiB), an archival project that deals with Bengali negotiations with William Shakespeare. The purpose of this application is to make the content writing and publishing process easy and accessible through automation.
 
 ## Key Features
@@ -36,7 +38,7 @@ The project directory has been organized into the following structure:
 ## How the App Works
 The entire application was built using Python. The graphical user interface (GUI) was created with PyQt5. `3xwords.py` contains all the code that is needed for the application to run. The GUI for the application was initially made with Qt Designer, and then the .ui files were converted to Python scripts using pyuic5. The resulting code was combined with custom Python logic in a single script, `3xwords.py`.
 
-Opening the application for the first time, the user will be prompted to provide the web URL and the name of the GitHub repository in which the files and directories related to their website exist. The user-provided data will be stored in a JSON file named `repo.json`. After that, the remote repository will be cloned to the local machine in the same directory. It should be noted that the application cannot run without `repo.json`. If the user fails to provide the required data, they will be warned, and if the data is still not provided, the application will close. Once the initial setup is successfully completed, the main features of the application will be accessible. The setup window can be reopened by pressing Ctrl+S on Windows.
+Opening the application for the first time, the user will be prompted to provide the web URL and the name of the GitHub repository in which the files and directories related to their website exist. The user-provided data will be stored in a JSON file named `repo.json`. After that, the remote repository will be cloned to the local machine. It should be noted that the application cannot run without `repo.json`. If the user fails to provide the required data, they will be warned, and if the data is still not provided, the application will close. Once the initial setup is successfully completed, the main features of the application will be accessible. The setup window can be reopened by pressing Ctrl+S on Windows.
 
 The main window of the application contains various fields or input boxes in the three tabs (mentioned in the “Key Features” section) to provide the required data for the post that the user wants to create, edit, or delete. These fields have different characteristics:
 - The **Title** field holds a maximum of 190 characters.
